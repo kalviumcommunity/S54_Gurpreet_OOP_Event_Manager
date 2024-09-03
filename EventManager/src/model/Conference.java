@@ -1,4 +1,4 @@
-package com.eventmanagement.model;
+package model;
 
 public class Conference extends Event {
     private String keynoteSpeaker;

@@ -1,4 +1,4 @@
-package com.eventmanagement.model;
+package model;
 
 public class Party extends Event {
     private int numberOfGuests;

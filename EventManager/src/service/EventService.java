@@ -1,6 +1,6 @@
-package com.eventmanagement.service;
+package service;
 
-import com.eventmanagement.model.Event;
+import model.Event;
 import java.util.ArrayList;
 import java.util.List;
 

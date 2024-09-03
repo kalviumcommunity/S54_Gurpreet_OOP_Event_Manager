@@ -1,4 +1,4 @@
-package com.eventmanagement.model;
+package model;
 
 public class Event {
     private String name;

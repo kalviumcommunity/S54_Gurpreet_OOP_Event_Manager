@@ -1,6 +1,5 @@
-package com.eventmanagement;
 
-import com.eventmanagement.controller.EventController;
+import controller.EventController;
 
 public class Main {
     public static void main(String[] args) {
