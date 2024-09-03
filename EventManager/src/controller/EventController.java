@@ -1,9 +1,9 @@
-package com.eventmanagement.controller;
+package controller;
 
-import com.eventmanagement.model.Meeting;
-import com.eventmanagement.model.Party;
-import com.eventmanagement.model.Conference;
-import com.eventmanagement.service.EventService;
+import model.Meeting;
+import model.Party;
+import model.Conference;
+import service.EventService;
 
 public class EventController {
     private EventService eventService = new EventService();
