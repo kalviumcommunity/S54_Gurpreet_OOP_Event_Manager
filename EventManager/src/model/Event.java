@@ -1,4 +1,4 @@
-package model;
+package com.eventmanagement.model;
 
 public class Event {
     private String name;
@@ -22,16 +22,6 @@ public class Event {
     public String getLocation() {
         return location;
     }
-    public void setName( String Name) {
-        this.name = Name;
-    }
-    public void setDate(String Date) {
-        this.date = Date;
-    }
-    public void setLocation(String Location) {
-        this.location = Location;
-    }
-    
 
     public void scheduleEvent() {
         System.out.println("Scheduling event: " + name + " on " + date + " at " + location);
