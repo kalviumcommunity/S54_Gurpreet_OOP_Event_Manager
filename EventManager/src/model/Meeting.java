@@ -1,4 +1,4 @@
-package model;
+package com.eventmanagement.model;
 
 public class Meeting extends Event {
     private String agenda;
