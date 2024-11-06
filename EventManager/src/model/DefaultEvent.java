@@ -1,22 +1,23 @@
 package model;
 
-public class Event {
+public class DefaultEvent {
     private String name;
     private String date;
     private String location;
 
     // Static variables
     private static int eventCount = 0;
-    private static int maxEventsAllowed = 100; // New static variable
+    private static int maxEventsAllowed = 100;
 
-    public Event(String name, String date, String location) {
+    // Default constructor
+    public DefaultEvent() {
         if (eventCount >= maxEventsAllowed) {
             throw new IllegalStateException("Cannot create more than " + maxEventsAllowed + " events.");
         }
-        this.name = name;
-        this.date = date;
-        this.location = location;
-        eventCount++; // Increment static variable when a new event is created
+        this.name = "Default Event";
+        this.date = "01-01-2025";
+        this.location = "Default Location";
+        eventCount++;
     }
 
     // Static method to get event count
@@ -26,7 +27,7 @@ public class Event {
 
     // Static method to decrease event count when an event is deleted
     public static void decreaseEventCount() {
-        eventCount--; // Decrement static variable when an event is deleted
+        eventCount--;
     }
 
     // Static method to get the maximum number of events allowed
@@ -58,6 +59,7 @@ public class Event {
     public void setDate(String date) {
         this.date = date;
     }
+
     public void setLocation(String location) {
         this.location = location;
     }

@@ -11,6 +11,9 @@ public class Meeting extends Event {
     public String getAgenda() {
         return agenda;
     }
+    public void setAgenda(String agenda) {
+        this.agenda = agenda;
+    }
 
     @Override
     public void scheduleEvent() {
