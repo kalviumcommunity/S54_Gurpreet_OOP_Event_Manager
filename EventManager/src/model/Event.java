@@ -1,13 +1,14 @@
 package model;
 
-public class Event {
+// Abstract Class (Abstraction)
+public abstract class Event {
     private String name;
     private String date;
     private String location;
 
     // Static variables
     private static int eventCount = 0;
-    private static int maxEventsAllowed = 100; // New static variable
+    private static int maxEventsAllowed = 100;
 
     public Event(String name, String date, String location) {
         if (eventCount >= maxEventsAllowed) {
@@ -19,26 +20,27 @@ public class Event {
         eventCount++; // Increment static variable when a new event is created
     }
 
-    // Static method to get event count
+    // Abstract Method (Must be implemented by subclasses)
+    public abstract void eventDetails();
+
+    // Static Methods
     public static int getEventCount() {
         return eventCount;
     }
 
-    // Static method to decrease event count when an event is deleted
     public static void decreaseEventCount() {
         eventCount--; // Decrement static variable when an event is deleted
     }
 
-    // Static method to get the maximum number of events allowed
     public static int getMaxEventsAllowed() {
         return maxEventsAllowed;
     }
 
-    // Static method to set the maximum number of events allowed
     public static void setMaxEventsAllowed(int maxEvents) {
         maxEventsAllowed = maxEvents;
     }
 
+    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -58,10 +60,12 @@ public class Event {
     public void setDate(String date) {
         this.date = date;
     }
+
     public void setLocation(String location) {
         this.location = location;
     }
 
+    // Virtual Function (Overridable Method)
     public void scheduleEvent() {
         System.out.println("Scheduling event: " + name + " on " + date + " at " + location);
     }
